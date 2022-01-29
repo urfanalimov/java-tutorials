@@ -30,4 +30,9 @@ public class UserDto {
 		this.lastName = lastName;
 	}
 
+	@Override
+	public String toString() {
+		return "UserDto [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + "]";
+	}
+	
 }

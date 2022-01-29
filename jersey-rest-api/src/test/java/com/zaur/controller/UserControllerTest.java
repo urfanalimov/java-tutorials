@@ -17,7 +17,7 @@ public class UserControllerTest extends JerseyTest {
 	@Test
 	public void get() {
 		String response = target("/users/1").request().get(String.class);
-		Assert.assertTrue("User is: 453".equals(response));
+		Assert.assertTrue("{\"id\":1,\"firstName\":\"Zaur\",\"lastName\":\"Alimov\"}".equals(response));
 	}
 
 	@Test

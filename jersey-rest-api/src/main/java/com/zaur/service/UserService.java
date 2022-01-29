@@ -22,4 +22,15 @@ public class UserService {
 			ConnectionManager.close(conn);
 		}
 	}
+
+	public static UserDto createUser(UserDto user) throws Exception {
+		logger.info("Creating user {}", user);
+		Connection conn = null;
+		try {
+			conn = ConnectionManager.connect();
+			return UserDao.create(conn, user);
+		} finally {
+			ConnectionManager.close(conn);
+		}
+	}
 }

@@ -9,5 +9,6 @@ CREATE TABLE IF NOT EXISTS t_user
 (
     id bigint NOT NULL DEFAULT nextval('t_user_id_seq'::regclass),
     first_name character varying(255) COLLATE pg_catalog."default",
-    last_name character varying(255) COLLATE pg_catalog."default"
+    last_name character varying(255) COLLATE pg_catalog."default",
+    CONSTRAINT t_user_pkey PRIMARY KEY (id)
 );
